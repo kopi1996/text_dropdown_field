@@ -57,10 +57,10 @@ class _TextDropdownFieldState<T extends Object>
     final bottomInset = View.of(context).viewInsets.bottom;
     final height = MediaQuery.of(context).size.height;
     var h = height / View.of(context).display.size.height;
-    if (h < (height * 0.2)) {
+    final keyboardHeight = bottomInset * h;
+    if (keyboardHeight < (height * 0.2)) {
       return;
     }
-    final keyboardHeight = bottomInset * h;
     _updateMenuDirection(keyboardHeight);
     setState(() {});
   }
