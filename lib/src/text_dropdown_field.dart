@@ -48,7 +48,6 @@ class _TextDropdownFieldState<T extends Object>
 
   @override
   void dispose() {
-    _focusNode?.dispose();
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
